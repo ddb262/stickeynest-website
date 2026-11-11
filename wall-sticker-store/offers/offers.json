@@ -1,0 +1,24 @@
+{
+  "offers": [
+    {
+      "code": "WALLJOY10",
+      "title": "10% off orders above ₹999",
+      "description": "Example coupon for a wall refresh.",
+      "discountType": "percent",
+      "discountValue": 10,
+      "minimumOrder": 999,
+      "maximumDiscount": 150,
+      "active": false
+    },
+    {
+      "code": "NEST50",
+      "title": "₹50 off orders above ₹699",
+      "description": "Example coupon for a happy home.",
+      "discountType": "flat",
+      "discountValue": 50,
+      "minimumOrder": 699,
+      "maximumDiscount": 50,
+      "active": false
+    }
+  ]
+}

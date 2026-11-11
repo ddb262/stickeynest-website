@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="qSh187fqmgPSDpIXZT8RP0XNfEdK5L8nja0XRaBovHc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" id="themeColorMeta" content="#2457a6" />
+    <meta name="description" content="Bring your walls to life with easy-to-love wall stickers. Cash on delivery available." />
+    <title>StickyNest — Make room for lovely</title>
+    <script>try{const savedTheme=localStorage.getItem('stickynest-theme');document.documentElement.dataset.theme=savedTheme||((matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light')}catch{document.documentElement.dataset.theme='light'}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement"><span class="announcement-pulse"></span> CASH ON DELIVERY AVAILABLE NOW <span class="announcement-dot">•</span> UPI PAYMENTS COMING SOON <span class="announcement-dot">•</span> A little joy for every wall</div>
+    <header class="site-header">
+      <div class="header-main">
+        <a class="brand" href="#home" aria-label="StickyNest home"><span class="brand-mark"><span class="brand-initial">S</span><span class="brand-sparkle">✳</span></span><span class="brand-wordmark"><span class="brand-name">StickyNest</span><small class="brand-tagline">happy walls, happy homes</small></span></a>
+        <form class="search-box" id="searchForm" role="search"><input id="searchInput" name="q" type="search" autocomplete="off" placeholder="Search wall stickers, themes and rooms" aria-label="Search wall stickers"><button type="submit" aria-label="Search">⌕</button></form>
+        <div class="header-actions">
+          <a class="header-shortcut" href="#address"><span class="shortcut-icon">⌖</span><span><small>DELIVER TO</small><b id="headerAddressLabel">Your address</b></span></a>
+          <a class="header-shortcut track-shortcut" href="#track"><span class="shortcut-icon">↗</span><span><small>NEED AN UPDATE?</small><b>Track order</b></span></a>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark</span></button>
+          <button class="cart-button" id="openCart" aria-label="Open shopping bag"><span class="bag-icon">♧</span><span>Bag</span><span class="cart-count" id="cartCount">0</span></button>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Shop by category">
+        <div class="category-nav" id="categoryNav"></div>
+        <div class="market-links"><a href="#home" data-nav="home">Home</a><a href="#shop" data-nav="shop">All stickers</a><a href="#address" data-nav="address">Delivery details</a><a href="#track" data-nav="track">Track order</a></div>
+      </nav>
+    </header>
+
+    <main id="app" aria-live="polite"><div class="initial-loading"><span class="loading-flower">✳</span><span>Gathering your happy finds…</span></div></main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a class="brand brand-light" href="#home"><span class="brand-mark"><span class="brand-initial">S</span><span class="brand-sparkle">✳</span></span><span class="brand-wordmark"><span class="brand-name">StickyNest</span><small class="brand-tagline">happy walls, happy homes</small></span></a>
+        <p>Small details. Big room energy.</p>
+        <div class="footer-links"><a href="#shop">Shop stickers</a><a href="#address">Delivery details</a><a href="#track">Track an order</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> <span id="storeFooterName">StickyNest</span></span><span>Made for your little corner of the world <span class="heart">♥</span></span><a href="mailto:ddbmaldini456@gmail.com" id="storeEmailLink">Questions? Email us</a></div>
+    </footer>
+
+    <div class="overlay" id="cartOverlay" aria-hidden="true">
+      <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+        <div class="drawer-head"><div><p class="eyebrow">YOUR LITTLE FINDS</p><h2 id="cartTitle">Your bag <span id="drawerCount"></span></h2></div><button class="icon-button" id="closeCart" aria-label="Close bag">×</button></div>
+        <div class="drawer-body" id="cartItems"></div>
+        <div class="drawer-foot" id="cartFoot"></div>
+      </aside>
+    </div>
+
+    <div class="overlay modal-overlay" id="checkoutOverlay" aria-hidden="true">
+      <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+        <div class="drawer-head"><div><p class="eyebrow">ALMOST YOURS</p><h2 id="checkoutTitle">Delivery details</h2></div><button class="icon-button" id="closeCheckout" aria-label="Close checkout">×</button></div>
+        <div id="checkoutContent"></div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js" defer></script>
+  </body>
+</html>

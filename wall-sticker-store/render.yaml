@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: stickynest-wall-sticker-store
+    runtime: node
+    region: singapore
+    plan: 0.5c-512mb
+    buildCommand: npm install
+    startCommand: npm start
+    disk:
+      name: store-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1

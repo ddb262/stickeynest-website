@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "pageTransitionMs": 300,
+  "cardStaggerMs": 35,
+  "hoverLiftPx": 5,
+  "heroFloat": true,
+  "buttonFeedback": true,
+  "reducedMotionRespect": true
+}
